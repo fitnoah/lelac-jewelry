@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le Lac Jewelry | Lab-Grown Diamonds, Graded by GIA</title>
+  <meta name="description" content="Le Lac Jewelry: lab-grown diamonds selected by a GIA Graduate Gemologist, with independent GIA grading reports.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <nav class="nav">
+    <a href="index.html" class="brand">Le Lac</a>
+    <div class="nav-links">
+      <a href="index.html" class="active">Home</a>
+      <a href="#simulator">Sparkle Lab</a>
+      <a href="our-craft.html">Our Craft</a>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <video autoplay muted loop playsinline preload="auto" poster="poster.jpg">
+      <source src="hero.mp4" type="video/mp4">
+    </video>
+    <div class="hero-content">
+      <div class="eyebrow">Lab-Grown Diamonds &middot; GIA Graded</div>
+      <h1>Brilliance, <em>without compromise.</em></h1>
+      <p>Every Le Lac diamond is hand-selected by a GIA Graduate Gemologist and arrives with an independent GIA grading report, so you know exactly what you are wearing.</p>
+      <a href="our-craft.html" class="btn">Discover Our Craft</a>
+    </div>
+  </header>
+
+  <section>
+    <div class="wrap">
+      <div class="eyebrow reveal">The Le Lac Standard</div>
+      <h2 class="section-title reveal">A real diamond, grown with intention.</h2>
+      <p class="lede reveal">Lab-grown diamonds share the same crystal structure, chemistry and optical properties as mined diamonds. What sets one diamond apart from another is not where it was formed. It is how well it was cut.</p>
+      <div class="pillars">
+        <div class="pillar reveal">
+          <div class="num">I.</div>
+          <h3>Identical by nature</h3>
+          <p>Chemically, physically and optically the same as a mined diamond. Grown in a controlled environment, which makes exceptional quality more accessible.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="num">II.</div>
+          <h3>Verified by GIA</h3>
+          <p>Every Le Lac diamond over 0.18 carats comes with an independent GIA report covering cut, color, clarity and carat weight.</p>
+        </div>
+        <div class="pillar reveal">
+          <div class="num">III.</div>
+          <h3>Cut comes first</h3>
+          <p>Cut drives brightness, fire and scintillation. We favor diamonds graded Very Good or Excellent for the best balance of beauty and value.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sim" id="simulator">
+    <div class="wrap sim-grid">
+      <div>
+        <canvas id="gemCanvas" class="sim-stage" width="920" height="920" aria-label="Animated diamond showing sparkle at the selected cut grade"></canvas>
+      </div>
+      <div>
+        <div class="eyebrow">Sparkle Lab</div>
+        <h2 class="section-title">See what cut grade really means.</h2>
+        <p style="color:var(--ivory-dim)">Drag through GIA's five cut grades and watch the same diamond change in front of you.</p>
+        <input type="range" id="grade" min="0" max="4" step="1" value="4" aria-label="GIA cut grade">
+        <div class="grade-labels"><span>Poor</span><span>Fair</span><span>Good</span><span>Very Good</span><span>Excellent</span></div>
+        <div class="grade-readout" id="gradeName">Excellent</div>
+        <div class="meters">
+          <div class="meter"><span>Brightness <em id="vB"></em></span><div class="bar"><i id="mB"></i></div></div>
+          <div class="meter"><span>Fire <em id="vF"></em></span><div class="bar"><i id="mF"></i></div></div>
+          <div class="meter"><span>Scintillation <em id="vS"></em></span><div class="bar"><i id="mS"></i></div></div>
+        </div>
+        <p class="grade-note" id="gradeNote"></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta">
+    <div class="wrap">
+      <h2 class="section-title reveal">Questions about a diamond?</h2>
+      <p class="lede reveal" style="margin:0 auto 36px">Ask our assistant anything about lab-grown diamonds, GIA reports or cut quality. It is trained on GIA's published cut grading research. Open the chat in the corner of your screen.</p>
+      <a href="our-craft.html" class="btn reveal">Read Our Craft</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="xfactor">
+      <b>X-Factor: Sparkle Lab</b>
+      An interactive diamond simulator. Drag the slider through GIA's five cut grades and watch an animated diamond's brightness, fire and scintillation change in real time, showing customers why cut quality matters most before they ever visit a showroom.
+    </div>
+    <div class="foot-line">&copy; 2026 Le Lac Jewelry &middot; Founded by a GIA Graduate Gemologist</div>
+  </footer>
+
+  <script src="sparkle.js"></script>
+  <script src="site.js"></script>
+  <!-- Chatling chatbot -->
+  <script> window.chtlConfig = { chatbotId: "6631523819" } </script>
+  <script async data-id="6631523819" id="chtl-script" type="text/javascript" src="https://chatling.ai/js/embed.js"></script>
+</body>
+</html>
